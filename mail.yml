@@ -1,0 +1,14 @@
+- hosts: localhost
+  tasks:
+   - name: sending mail
+     mail:
+        host: smtp.gmail.com
+        port: 587
+        username: "sender_example@xyz.com"
+        password: "12345"
+        to: "receiver_example@xyz.com"
+        subject: "Warning !"
+        body: "Someone Access Your system"
+        attach: /var/www/html/security/ph.jpg
+ #attach will have the location wehere clicked image will store [modifiable]
+
